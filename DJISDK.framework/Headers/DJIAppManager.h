@@ -8,24 +8,26 @@
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIFoundation.h>
 
-///Register App Error Code
-#define RegisterSuccess                   0
-#define RegisterErrorConnectInternet     -1
-#define RegisterErrorInvalidAppKey       -2
-#define RegisterErrorGetMetaDataTimeout  -3
-#define RegisterErrorDeviceNotMatch      -4
-#define RegisterErrorBundleIdNotMatch    -5
-#define RegisterErrorAppKeyProhibited    -6
-#define RegisterErrorActivationExceed    -7
-#define RegisterErrorAppKeyPlatformError -8
-#define RegisterErrorAppKeyNotExist      -9
-#define RegisterErrorAppKeyNoPermission  -10
-#define RegisterErrorServerParseFailure  -11
-#define RegisterErrorServerWriteError    -12
-#define RegisterErrorServerDataAbnormal  -13
-#define RegisterErrorInvalidMetaData     -14
+/**
+ * Below are the error codes that will help you identify what occurrs when an application is registered. 
+ */
+#define RegisterSuccess                   0  //RegistrationSuccessful
+#define RegisterErrorConnectInternet     -1  //RegistrationErrorCouldNotConnectToInternet
+#define RegisterErrorInvalidAppKey       -2  //RegistrationErrorInvalidAppKey
+#define RegisterErrorGetMetaDataTimeout  -3  //RegistrationError--??
+#define RegisterErrorDeviceNotMatch      -4  //RegistrationError--??
+#define RegisterErrorBundleIdNotMatch    -5  //RegistrationErrorBundleIdDoesNotMatch
+#define RegisterErrorAppKeyProhibited    -6  //RegistrationErrorAppKeyIsProhibted -- how is this different from invalid app key
+#define RegisterErrorActivationExceed    -7  //RegistrationError--??
+#define RegisterErrorAppKeyPlatformError -8  //RegistrationError--??
+#define RegisterErrorAppKeyNotExist      -9  //RegistrationErrorAppKeyDoesNotExist
+#define RegisterErrorAppKeyNoPermission  -10 //RegistrationErrorAppKeyDoesNotHavePermission
+#define RegisterErrorServerParseFailure  -11 //RegistrationError--??
+#define RegisterErrorServerWriteError    -12 //RegistrationError--??
+#define RegisterErrorServerDataAbnormal  -13 //RegistrationError--??
+#define RegisterErrorInvalidMetaData     -14 //RegistrationError--??
 
-#define RegisterErrorUnknown             -1000
+#define RegisterErrorUnknown             -1000 //RegistrationErrorUnknown
 
 @protocol DJIAppManagerDelegate <NSObject>
 

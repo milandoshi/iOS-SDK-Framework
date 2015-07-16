@@ -1,6 +1,6 @@
 //
 //  DJIBattery.h
-//  DJISDK
+//  DJISDK Framework
 //
 //  Copyright (c) 2015 DJI. All rights reserved.
 //
