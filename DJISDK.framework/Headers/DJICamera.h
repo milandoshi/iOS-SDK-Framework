@@ -311,7 +311,7 @@
 -(void) setContinuousCapture:(CameraContinuousCapturePara)capturePara withResultBlock:(DJIExecuteResultBlock)block;
 
 /**
- *  Get the camera's continuous capture parameters
+ *  Get the camera's continuous capture parameters。
  *
  *  @param block The remote execute result block
  */
