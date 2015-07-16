@@ -3,7 +3,7 @@
 //  DJISDK Framework
 //
 //  Copyright (c) 2015 DJI. All rights reserved.
-//
+//  Hello
 
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIObject.h>
