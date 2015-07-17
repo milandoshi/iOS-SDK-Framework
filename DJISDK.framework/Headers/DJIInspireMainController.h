@@ -9,7 +9,6 @@
 #import <DJISDK/DJIHotPointSurround.h>
 #import <DJISDK/DJIGroundStation.h>
 
-
 @interface DJIInspireMainController : DJIMainController <DJIHotPointSurround, DJIGroundStation>
 
 /**
@@ -29,18 +28,18 @@
 -(void) stopUpdateMCSystemState;
 
 /**
- *  Open tripod protection. If opened, the tripod will drop down automatically while the drone landing
+ *  Open landing gear protection. If opened, the landing gear will drop down automatically while the drone landing
  *
  *  @param block Remote execute reult
  */
--(void) openTripodProtectionWithResult:(DJIExecuteResultBlock)block;
+-(void) openLandingGearProtectionWithResult:(DJIExecuteResultBlock)block;
 
 /**
- *  Close tripod protection
+ *  Close landing gear protection
  *
  *  @param block Remote execute reult
  */
--(void) closeTripodProtectionWithResult:(DJIExecuteResultBlock)block;
+-(void) closeLandingGearProtectionWithResult:(DJIExecuteResultBlock)block;
 
 /**
  *  Lock the course using current direction
@@ -145,7 +144,7 @@
 -(void) getAircraftNameWithResult:(void(^)(NSString* name, DJIError* error))result;
 
 /**
- *  Send data to external device. Only support in product M100.
+ *  Send data to external device. Only support in product Matrice100.
  *
  *  @param data  Data to be sent to external device, the size of data should not large then 512 byte.
  *  @param block Remote execute result.

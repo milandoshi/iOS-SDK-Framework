@@ -25,10 +25,6 @@ typedef NS_ENUM(uint8_t, DJINavigationMissionType)
      */
     NavigationMissionHotpoint,
     /**
-     *  Followme mission, Not support now
-     */
-    NavigationMissionFollowme,
-    /**
      *  Unknown mission
      */
     NavigationMissionUnknown
@@ -179,14 +175,6 @@ DJI_API_EXTERN const float DJIVerticalFlightControlVelocityMax;
  *  Min vertical flight control position
  */
 DJI_API_EXTERN const float DJIVerticalFlightControlPositionMin;
-/**
- *  Min vertical flight control throttle
- */
-DJI_API_EXTERN const float DJIVerticalFlightControlThrottleMin;
-/**
- *  Max vertical flight control throttle
- */
-DJI_API_EXTERN const float DJIVerticalFlightControlThrottleMax;
 
 /**
  *  Flight control's vertical control mode, will affect the mThrottle of DJINavigationFlightControlData
@@ -200,10 +188,6 @@ typedef NS_ENUM(uint8_t, DJINavigationFlightControlVerticalControlMode){
      *  The vertical control value is position value. mThrottle value will in range [0, +∞) m. value is offset  position to the ground.
      */
     NavigationFlightControlVerticalControlPosition,
-    /**
-     *  The vertical control value is percentage of throttle. mThrottle value will in range [0, 100]
-     */
-    NavigationFlightControlVerticalControlThrottle,
 };
 
 /**
@@ -235,10 +219,6 @@ typedef NS_ENUM(uint8_t, DJINavigationFlightControlHorizontalControlMode){
      *  The horizontal control value is velocity value. mPitch and mRoll will in range [-10, +10] m/s
      */
     NavigationFlightControlHorizontalControlVelocity,
-    /**
-     *  The horizontal control value is position value. mPitch and mRoll is in range (-∞, +∞) m. value is offset value to the current position.
-     */
-    NavigationFlightControlHorizontalControlPosition,
 };
 
 /**
@@ -303,16 +283,16 @@ typedef struct
 @required
 
 /**
- *  Mission status update
+ *  Navigation mission status update, If current mission is DJIGroundStation then the 'missionStatus' will be kind of class DJIWaypointMissionStatus. If current mission is DJIHotPointSurround mission, then the 'missionStatus' will be kind of class DJIHotpointMissionStatus. If current mission is DJIFollowMe mission, then the 'missionStatus' will be kind of class DJIFollowMeMissionStatus.
  *
  *  @param missionStatus Mission status for different mission
  */
 -(void) onNavigationMissionStatusChanged:(DJINavigationMissionStatus*)missionStatus;
 
 /**
- *  Mission event post
+ *  Navigation mission event.
  *
- *  @param event Event post from different mission
+ *  @param event Event posted from different mission
  */
 -(void) onNavigationPostMissionEvents:(DJINavigationEvent*)event;
 
@@ -338,36 +318,29 @@ typedef struct
  */
 @property(nonatomic, assign) DJINavigationFlightControlCoordinateSystem horizontalControlCoordinateSystem;
 /**
- *  Yaw control coordinate system
+ *  Yaw control coordinate system. Deprecated, will be fixed as NavigationFlightControlCoordinateSystemGround.
  */
-@property(nonatomic, assign) DJINavigationFlightControlCoordinateSystem yawControlCoordinateSystem;
+@property(nonatomic, assign) DJINavigationFlightControlCoordinateSystem yawControlCoordinateSystem DJI_API_DEPRECATED;
 
 /**
- *  Enter navigation mode. To success enter the navigation mode, the remote controller's mode switch should be switched to 'F' mode and the IOC functionality is disabled. if the switch ha already at 'F' mode, then user must switch back and forth to enable navigation control.
+ *  Enter navigation mode. To success enter the navigation mode, the remote controller's mode switch should be switched to 'F' mode and the IOC functionality is disabled. if the switch has already at 'F' mode, then user must switch back and forth to enable navigation control.
  *
- *  @param result Remote execute result
+ *  @param result Remote execute result callback.
  */
 -(void) enterNavigationModeWithResult:(DJIExecuteResultBlock)result;
 
 /**
- *  Get current navigation mission type
- *
- *  @param result Remote execute result.
- */
--(void) getCurrentNavigationMissionTypeWithResult:(void(^)(DJINavigationMissionType type, DJIError* error))result;
-
-/**
  *  Exit navigation mode
  *
- *  @param result Remote execute result
+ *  @param result Remote execute result callback.
  */
 -(void) exitNavigationModeWithResult:(DJIExecuteResultBlock)result;
 
 /**
- *  Control the aricraft. To use this api successfully, the aircraft shouldn't have other mission in executing.
+ *  Control the aricraft. To use this api, the aircraft shouldn't have other mission in executing.
  *
  *  @param controlData Control data sent to the aircraft
- *  @param result      Remote execute result.
+ *  @param result      Remote execute result callback.
  */
 -(void) sendFlightControlData:(DJINavigationFlightControlData)controlData withResult:(DJIExecuteResultBlock)result;
 
