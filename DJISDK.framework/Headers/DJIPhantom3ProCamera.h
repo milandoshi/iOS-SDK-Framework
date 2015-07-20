@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIPhantom3ProfessionalCamera.h
+
 #import <CoreGraphics/CoreGraphics.h>
 #import <DJISDK/DJICamera.h>
 #import <DJISDK/DJICameraSettingsDef.h>

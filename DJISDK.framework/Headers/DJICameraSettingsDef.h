@@ -6,6 +6,9 @@
  *  All rights reserved.
  *
  */
+
+//TODO FILE NAME CHANGE: DJICameraSettings.h
+
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIFoundation.h>
 

@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIPhantom3ProfessionalBattery.h
+
 #import <DJISDK/DJIBattery.h>
 
 @class DJIError;

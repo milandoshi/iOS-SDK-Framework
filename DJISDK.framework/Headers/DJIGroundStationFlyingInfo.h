@@ -6,6 +6,9 @@
  *  All rights reserved.
  *
  */
+
+//TODO FILE NAME CHANGE: DJIGroundStationFlightInformation.h
+
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <DJISDK/DJIMainControllerDef.h>

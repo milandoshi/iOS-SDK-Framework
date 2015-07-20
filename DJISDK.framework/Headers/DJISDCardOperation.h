@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJISDCard.h
+
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIObject.h>
 

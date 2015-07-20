@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIPhantom3ProfessionalRemoteController.h
+
 #import <DJISDK/DJISDK.h>
 
 @interface DJIPhantom3ProRemoteController : DJIRemoteController

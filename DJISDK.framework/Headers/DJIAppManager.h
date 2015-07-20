@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIApplicationManager.h
+
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIFoundation.h>
 

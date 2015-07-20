@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIMainControllerGoHome.h
+
 #import <Foundation/Foundation.h>
 
 @interface DJIMCSmartGoHomeData : NSObject

@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJICameraCurrentState.h
+
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJICameraSettingsDef.h>
 

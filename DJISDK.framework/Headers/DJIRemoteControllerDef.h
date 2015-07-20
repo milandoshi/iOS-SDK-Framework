@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIRemoteControllerSettings.h
+
 #import <Foundation/Foundation.h>
 
 #define DJI_RC_NAME_BUFFER_SIZE         (6)

@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIPhantom3ProfessionalMainController.h
+
 #import <DJISDK/DJIMainController.h>
 #import <DJISDK/DJIHotPointSurround.h>
 #import <DJISDK/DJIGroundStation.h>

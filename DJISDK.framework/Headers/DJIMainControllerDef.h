@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIMainControllerSettings.h
+
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 /**

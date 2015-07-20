@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIGimbalConstraints.h
+
 #import <Foundation/Foundation.h>
 
 @interface DJIGimbalCapacity : NSObject

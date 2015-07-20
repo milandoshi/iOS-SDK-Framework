@@ -7,6 +7,8 @@
  *
  */
 
+//TODO FILE NAME CHANGE: DJIPhantom3ProfessionalGimbal.h
+
 #import <DJISDK/DJIGimbal.h>
 
 @interface DJIPhantom3ProGimbal : DJIGimbal
