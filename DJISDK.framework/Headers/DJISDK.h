@@ -56,8 +56,9 @@
     //GroundStation
     #import <DJISDK/DJIGroundStation.h>
     #import <DJISDK/DJIGroundStationTask.h>
-    #import <DJISDK/DJIHotPointSurround.h>
-    #import <DJISDK/DJIGroundStationWaypoint.h>
+        //Features
+        #import <DJISDK/DJIHotPointSurround.h>
+        #import <DJISDK/DJIGroundStationWaypoint.h>
         //Current State
         #import <DJISDK/DJIGroundStationFlyingInfo.h>
 
