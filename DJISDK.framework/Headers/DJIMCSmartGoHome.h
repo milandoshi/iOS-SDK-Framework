@@ -14,38 +14,50 @@
 @interface DJIMCSmartGoHomeData : NSObject
 
 /**
- *  The remain time in second for flight (include landing).
+ *  The remaining time, in seconds, it will take the aircraft to go home. This
+ *  time includes the landing time for the aircraft.
  */
 @property(nonatomic, readonly) NSUInteger remainTimeForFlight;
+//TODO PROPERTY NAME CHANGE: remainingTimeUntilReachedHome
 
 /**
- *  The time in second that need for going to home point from current location.
+ *  The time, in seconds, that is needed for the aircraft to go home from its current location.
  */
 @property(nonatomic, readonly) NSUInteger timeForGoHome;
+//TODO PROPERTY NAME CHANGE: timeNeededToGoHome
 
 /**
- *  The time in seconds that need for landing from current height.
+ *  The time, in seconds, that is needed for the aircraft to land from its current height.
  */
 @property(nonatomic, readonly) NSUInteger timeForLanding;
+//TODO PROPERTY NAME CHANGE: timeNeededToLandFromCurrentHeight
 
 /**
- *  The power percent that need for going to home point from current location.
+ *  The battery percentage needed (TODO: Ask if aircraft or RC) for the aircraft
+ *  to go home from its current location.
  */
 @property(nonatomic, readonly) NSUInteger powerPercentForGoHome;
+//TODO PROPERTY NAME CHANGE: batteryPercentageNeededToGoHome
 
 /**
- *  The power percent that need for landing from current height.
+ *  The battery percentage needed (TODO: Ask if aircraft or RC) for the aircraft
+ *  to land from its current height.
  */
 @property(nonatomic, readonly) NSUInteger powerPercentForLanding;
+//TODO PROPERTY NAME CHANGE: batteryPercentageNeededToLandFromCurrentHeight
 
 /**
- *  The max radius in meter for flight. the radius is the distance form home point to drone location.
+ *  The max radius in meters that the aircraft can fly to from its home location.
  */
 @property(nonatomic, readonly) float radiusForGoHome;
+//TODO PROPERTY NAME CHANGE: maxRadiusAircraftCanFlyToGoHome
 
 /**
- *  The drone request for go home. User should response this request the value is YES, or the aircraft will automatically go home after 10 seconds.
+ *  Determines whether or not the drone is requesting to go home. If value is YES and
+ *  the user does not respond, the aircraft will automatically go to it's home location 
+ *  after 10 seconds. (TODO: Ask what they mean by the user here)  
  */
 @property(nonatomic, readonly) BOOL droneRequestGoHome;
+//TODO PROPERTY NAME CHANGE: droneRequestToGoHome
 
 @end

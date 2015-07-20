@@ -7,7 +7,8 @@
  *
  */
 
-//TODO FILE NAME CHANGE: DJIRemoteControllerSettings.h
+//TODO FILE NAME CHANGE: DJIRemoteControllerDefinitions.h
+//Alternatively, it could be DJIRemoteControllerSettings.h
 
 #import <Foundation/Foundation.h>
 
@@ -18,23 +19,23 @@
 #pragma pack(1)
 
 /**
- *  RC work mode
+ *  Below are the four modes a remote controller could be in.
  */
 typedef NS_ENUM(uint8_t, DJIRCWorkMode){
     /**
-     *  Master mode
+     *  Master mode:
      */
     RCWorkModeMaster,
     /**
-     *  Slave mode
+     *  Slave mode:
      */
     RCWorkModeSlave,
     /**
-     *  Work mode close
+     *  Work mode close:
      */
     RCWorkModeClosed,
     /**
-     *  Work mode unknown
+     *  Work mode unknown: 
      */
     RCWorkModeUnknown,
 };

@@ -102,14 +102,18 @@ typedef struct
 typedef struct
 {
     BOOL isReachMaxHeight;
+    //TODO PROPERTY NAME CHANGE: hasReachedMaxHeight
     BOOL isReachMaxDistance;
+    //TODO PROPERTY NAME CHANGE: hasReachedMaxDistance
     Float32 maxLimitHeight;
+    //TODO PROPERTY NAME CHANGE: maxHeightLimit
     Float32 maxLimitDistance;
+    //TODO PROPERTY NAME CHANGE: maxDistanceLimit
 } DJILimitFlyStatus;
 
 
 /**
- *  Main controller action for low battery incident
+ *  Opetions for what do when 
  */
 typedef NS_ENUM(uint8_t, DJIMCLowBatteryAction){
     /**

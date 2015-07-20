@@ -15,22 +15,23 @@
 @interface DJICameraSystemState : NSObject
 
 /**
- *  Show the camera is taking RAW capture or JPEG capture.
+ *  The camera is currently taking a .raw or .jpeg type of picture.
  */
 @property(nonatomic, readonly) BOOL isTakingRawCapture;
 
 /**
- *  The camera is taking continuous capture.
+ *  The camera is taking pictures continuously.
  */
 @property(nonatomic, readonly) BOOL isTakingContinusCapture;
 
+                                                                    //TODO: What is the difference between continuous/multi capture?
 /**
  *  The camera is taking multi capture.
  */
 @property(nonatomic, readonly) BOOL isTakingMultiCapture;
 
 /**
- *  The camera is taking single capture.
+ *  The camera is taking a single capture.
  */
 @property(nonatomic, readonly) BOOL isTakingSingleCapture;
 

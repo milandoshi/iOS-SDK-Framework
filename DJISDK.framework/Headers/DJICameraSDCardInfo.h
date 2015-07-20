@@ -8,7 +8,8 @@
  */
 
 
-//TODO FILE NAME CHANGE: DJICameraSDCardInformation.h
+//TODO FILE NAME CHANGE: DJISDCardCurrentState.h
+//Alternatively, it could be DJICameraSDCardInformation.h.
 
 #import <Foundation/Foundation.h>
 

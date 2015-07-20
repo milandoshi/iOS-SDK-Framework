@@ -22,7 +22,6 @@
 
 //Camera
 #import <DJISDK/DJICamera.h>
-#import <DJISDK/DJICameraSettingsDef.h>
     //SD Card
     #import <DJISDK/DJICameraSDCardInfo.h>
     #import <DJISDK/DJISDCardOperation.h>
@@ -31,6 +30,8 @@
     #import <DJISDK/DJIMedia.h>
     //Current State
     #import <DJISDK/DJICameraSystemState.h>
+    //Settings
+    #import <DJISDK/DJICameraSettingsDef.h>
 
 
 //Battery
@@ -45,11 +46,11 @@
 //Main Controller
 #import <DJISDK/DJIMainController.h>
 #import <DJISDK/DJIMainControllerDef.h>
-#import <DJISDK/DJIMCSmartGoHome.h>
     //Current State
     #import <DJISDK/DJIMCSystemState.h>
     #import <DJISDK/DJIMCLandingGearState.h>
-
+    //Go Home
+    #import <DJISDK/DJIMCSmartGoHome.h>
 
 //Navigation
 #import <DJISDK/DJINavigation.h>
@@ -76,7 +77,7 @@
 #import <DJISDK/DJIRemoteControllerDef.h>
 
 
-//DJI Phantom
+//DJI Phantom (Universal)
 #import <DJISDK/DJIPhantomCamera.h>
 #import <DJISDK/DJIPhantomMainController.h>
 
@@ -103,5 +104,4 @@
 #import <DJISDK/DJIPhantom3ProBattery.h>
 #import <DJISDK/DJIPhantom3ProCamera.h>
 #import <DJISDK/DJIPhantom3ProMainController.h>
-
 

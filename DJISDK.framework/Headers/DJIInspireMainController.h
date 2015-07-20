@@ -23,11 +23,13 @@
  *  Start update main controller's system state
  */
 -(void) startUpdateMCSystemState;
+//TODO METHOD NAME CHANGE: startUpdatingMainControllerCurrentState
 
 /**
  *  Stop update main controller's system state
  */
 -(void) stopUpdateMCSystemState;
+//TODO METHOD NAME CHANGE: stopUpdatingMainControllerCurrentState
 
 /**
  *  Open landing gear protection. If opened, the landing gear will drop down automatically while the drone landing
@@ -35,6 +37,7 @@
  *  @param block Remote execute reult
  */
 -(void) openLandingGearProtectionWithResult:(DJIExecuteResultBlock)block;
+//TODO METHOD NAME CHANGE: turnOnSelfAdaptiveLandingGearWithCallbackBlock:
 
 /**
  *  Close landing gear protection
@@ -42,6 +45,7 @@
  *  @param block Remote execute reult
  */
 -(void) closeLandingGearProtectionWithResult:(DJIExecuteResultBlock)block;
+//TODO METHOD NAME CHANGE: turnOffSelfAdaptiveLandingGearWithCallbackBlock:
 
 /**
  *  Lock the course using current direction
@@ -49,7 +53,7 @@
  *  @param block Remote execute result.
  */
 -(void) lockCourseUsingCurrentDirectionWithResult:(DJIExecuteResultBlock)block;
-
+//TODO METHOD NAME CHANGE: useCurrentDirectionForEntireFlightWithCallbackBlock
 /**
  *  Set dynamic home point enable
  *

@@ -54,17 +54,17 @@ typedef void (^AsyncFetchHandler)(NSData* data, BOOL* stop, NSError* error);
 @property(nonatomic, readonly) DJIMediaContext* mediaContext;
 
 /**
- *  The media file name
+ *  Name of the media file
  */
 @property(nonatomic, readonly) NSString* fileName;
 
 /**
- *  The media file size
+ *  Size of the media file
  */
 @property(nonatomic, readonly) long long fileSize;
 
 /**
- *  The media's create time
+ *  The time 
  */
 @property(nonatomic, readonly) NSString* createTime;
 
