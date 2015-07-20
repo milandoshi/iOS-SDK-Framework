@@ -7,7 +7,8 @@
  *
  */
 
-//TODO FILE NAME CHANGE: DJIGroundStationFlightInformation.h
+//TODO FILE NAME CHANGE: DJIGroundStationCurrentState.h
+//It could also be DJIGroundStationFlyingInformation.h
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>

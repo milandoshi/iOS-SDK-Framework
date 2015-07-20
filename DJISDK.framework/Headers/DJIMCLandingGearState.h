@@ -7,7 +7,7 @@
  *
  */
 
-//TODO FILE NAME CHANGE: DJIMainControllerLandingGearState.h
+//TODO FILE NAME CHANGE: DJIMainControllerLandingGearCurrentState.h
 
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIMainControllerDef.h>
