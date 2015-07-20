@@ -1,36 +1,56 @@
-//
-//  DJIAppManager.h
-//  DJISDK
-//
-//  Copyright (c) 2015 DJI. All rights reserved.
-//
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJIAppManager.h
+ *
+ *  Copyright (c) 2015, DJI. 
+ *  All rights reserved.
+ *
+ */
 
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIFoundation.h>
 
-//Error code for regist App
+/**
+ * The error codes below are the error codes that are returned when the method -(void) appManagerDidRegisterWithError:(int)errorCode is called.
+ */
+
 #define RegisterSuccess                   0
+//TODO: #define RegistrationSuccessful
 
-// The first time regist app should connect the internet.
+//The application is not able to connect to the internet the first time it registers.
 #define RegisterErrorConnectInternet     -1
+//#define RegistrationErrorCouldNotConnectToInternet
 
-// The input app key is invalid. please check your app key is correct.
+
+//The application key you provided is incorrect.
 #define RegisterErrorInvalidAppKey       -2
+//#define RegistrationErrorInvalidApplicationKey
 
-// May be the network is bussy or the server is unreachable.
+
+//The network you are trying to reach is busy, or the server is unreachable.
 #define RegisterErrorGetMetaDataTimeout  -3
+//#define RegistrationError--??
 
-// Attempt to copy meta data from other registered device is not allow.
+~~~~~~
+
+//Attempt to copy meta data from other registered device is not allow.
 #define RegisterErrorDeviceNotMatch      -4
+//#define RegistrationError--??
 
-// The bundle identifier of your app should be identical to the one you regist from the website.
+
+//The bundle identifier of your application does not match the bundle identifier you registered on the website when you applied to obtain an application key.
 #define RegisterErrorBundleIdNotMatch    -5
+//#define RegistrationErrorBundleIdDoesNotMatch
+
 
 // The app key is prohibited, please contact to the dji for help.
 #define RegisterErrorAppKeyProhibited    -6
+//#define RegistrationErrorApplicationKeyProhibited
+
 
 // Maximum number of active count is exceed, please contact to the dji for help.
 #define RegisterErrorActivationExceed    -7
+//#define RegistrationError--??
 
 // The app key is apply for other platform.
 #define RegisterErrorAppKeyPlatformError -8
@@ -61,9 +81,13 @@
 
 @protocol DJIAppManagerDelegate <NSObject>
 
+~~~~~~
+
 @required
 /**
- *  Regist result callback
+ *  This method is a callback method after the application attempts to register.
+ *
+ *  @param errorCode Associated with the error codes written above.
  */
 -(void) appManagerDidRegisterWithError:(int)errorCode;
 

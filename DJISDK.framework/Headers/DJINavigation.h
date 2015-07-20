@@ -1,10 +1,11 @@
-//
-//  DJINavigation.h
-//  DJISDK
-//
-//  Created by Ares on 15/4/14.
-//  Copyright (c) 2015年 DJI. All rights reserved.
-//
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJINavigation.h
+ *
+ *  Copyright (c) 2015, DJI.
+ *  All rights reserved.
+ *
+ */
 
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIObject.h>

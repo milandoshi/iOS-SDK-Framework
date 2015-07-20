@@ -1,9 +1,11 @@
-//
-//  DJIMainController.h
-//  DJISDK
-//
-//  Copyright (c) 2015 DJI. All rights reserved.
-//
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJIMainController.h
+ *
+ *  Copyright (c) 2015, DJI.
+ *  All rights reserved.
+ *
+ */
 
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIObject.h>

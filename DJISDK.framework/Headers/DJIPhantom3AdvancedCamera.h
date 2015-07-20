@@ -1,9 +1,11 @@
-//
-//  DJIPhantom3AdvancedCamera.h
-//  DJISDK
-//
-//  Copyright (c) 2015年 DJI. All rights reserved.
-//
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJIPhantom3AdvancedCamera.h
+ *
+ *  Copyright (c) 2015, DJI.
+ *  All rights reserved.
+ *
+ */
 
 #import <DJISDK/DJICamera.h>
 #import <DJISDK/DJICameraSettingsDef.h>

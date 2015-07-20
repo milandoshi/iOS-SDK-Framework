@@ -1,9 +1,11 @@
-//
-//  DJIRemoteController.h
-//  DJISDK
-//
-//  Copyright (c) 2015 DJI. All rights reserved.
-//
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJIRemoteController.h
+ *
+ *  Copyright (c) 2015, DJI.
+ *  All rights reserved.
+ *
+ */
 
 #import "DJIObject.h"
 #import <CoreLocation/CoreLocation.h>

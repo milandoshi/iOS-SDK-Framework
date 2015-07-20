@@ -1,9 +1,11 @@
-//
-//  DJIInspireBattery.h
-//  DJISDK
-//
-//  Copyright (c) 2015 DJI. All rights reserved.
-//
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJIInspireBattery.h
+ *
+ *  Copyright (c) 2015, DJI.
+ *  All rights reserved.
+ *
+ */
 
 #import <DJISDK/DJIBattery.h>
 

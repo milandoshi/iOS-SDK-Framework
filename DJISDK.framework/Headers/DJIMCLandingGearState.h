@@ -1,9 +1,11 @@
-//
-//  DJIMCLandingGearState.h
-//  DJISDK
-//
-//  Copyright (c) 2015 DJI. All rights reserved.
-//
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJIMCLandingGearState.h
+ *
+ *  Copyright (c) 2015, DJI.
+ *  All rights reserved.
+ *
+ */
 
 #import <Foundation/Foundation.h>
 #import <DJISDK/DJIMainControllerDef.h>

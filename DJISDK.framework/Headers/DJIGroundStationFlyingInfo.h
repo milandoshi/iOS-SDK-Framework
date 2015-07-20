@@ -1,10 +1,11 @@
-//
-//  DJIGroundStationFlightInfo.h
-//  DJISDK
-//
-//  Copyright (c) 2015 DJI. All rights reserved.
-//
-
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJIGroundStationFlyinginfo.h
+ *
+ *  Copyright (c) 2015, DJI.
+ *  All rights reserved.
+ *
+ */
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <DJISDK/DJIMainControllerDef.h>

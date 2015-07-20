@@ -1,9 +1,11 @@
-//
-//  DJIInspireGimbal.h
-//  DJISDK
-//
-//  Copyright (c) 2015 DJI. All rights reserved.
-//
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJIInspireGimbal.h
+ *
+ *  Copyright (c) 2015, DJI.
+ *  All rights reserved.
+ *
+ */
 
 #import <DJISDK/DJIGimbal.h>
 

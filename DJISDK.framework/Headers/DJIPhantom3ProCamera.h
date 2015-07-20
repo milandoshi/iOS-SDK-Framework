@@ -1,9 +1,11 @@
-//
-//  DJIPhantom3ProCamera.h
-//  DJISDK
-//
-//  Copyright (c) 2015年 DJI. All rights reserved.
-//
+/*
+ *  DJI iOS Mobile SDK Framework
+ *  DJIPhantom3ProCamera.h
+ *
+ *  Copyright (c) 2015, DJI.
+ *  All rights reserved.
+ *
+ */
 
 #import <CoreGraphics/CoreGraphics.h>
 #import <DJISDK/DJICamera.h>
