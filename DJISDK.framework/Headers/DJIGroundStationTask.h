@@ -12,45 +12,48 @@
 @class DJIGroundStationWaypoint;
 
 /**
- *  Action of task when finished
+ *  Action that will be completed when an aircraft finishes a Ground Station task
  */
 typedef NS_ENUM(NSUInteger, DJIGSTaskFinishedAction){
     /**
-     *  No action. aircraft exit the waypoint mission and hover in the air. could controled by the remote controller.
+     *  No action will be taken. The aircraft will exit the task and hover in the air where
+     *  the task was completed. After that, the aircraft will be able to be controlled by
+     *  the remote controller.
      */
     GSTaskFinishedNoAction,
     /**
-     *  Aircraft will go home
+     *  The aicraft will go home.
      */
     GSTaskFinishedGoHome,
     /**
-     *  Aircraft will auto landing
+     *  The aircraft will land automatically.
      */
-    GSTaskFinishedAutoLanding,
+    GSTaskFinishedAutoLanding, //TODO PROPERTY NAME CHANGE: GSTaskFinishedAutoLand
     /**
-     *  Aircraft will go to the first waypoint
+     *  The aircraft will go back to its first waypoint.
      */
-    GSTaskFinishedGoFirstWaypoint
+    GSTaskFinishedGoFirstWaypoint //TODO PROPERTY NAME CHANGE: GSTaskFinishedGoToFirstWaypoint
 };
 
 /**
- *  Heading mode
+ *  There are four different modes available for an aicraft's heading during a ground station task.
  */
 typedef NS_ENUM(NSUInteger, DJIGSHeadingMode){
     /**
-     *  Aircraft's heading toward to the next waypoint
+     *  Aircraft's heading will be set toward each consequent waypoint
      */
     GSHeadingTowardNextWaypoint,
     /**
-     *  Aircraft's heading using the initial direction
+     *  Aircraft's heading will be set to the initial direction the aircraft
+     *  took off from
      */
     GSHeadingUsingInitialDirection,
     /**
-     *  Aircraft's heading control by the remote controller
+     *  Aircraft's heading will be controlled by the remote controller
      */
     GSHeadingControlByRemoteController,
     /**
-     *  Aircraft's heading using the waypoint's heading value
+     *  Aircraft's heading will be set based on each individual waypoint's heading value
      */
     GSHeadingUsingWaypointHeading,
 };
@@ -61,88 +64,101 @@ typedef NS_ENUM(NSUInteger, DJIGSHeadingMode){
 }
 
 /**
- *  Waypoints count in the task.
+ *  Number of waypoints in the ground station task
  */
 @property(nonatomic, readonly) int waypointCount;
 
 /**
- *  The first waypoint index of task.
+ *  Index of the first waypoint in the waypointsArray
  */
 @property(nonatomic, assign) int startWaypointIndex;
 
 /**
- *  Whether execute task looply. Default is NO
+ *  This property determines whether or not the ground station task will execute in a 
+ *  loop. The default value for this property is NO (false).
  */
 @property(nonatomic, assign) BOOL isLoop;
 
 /**
- *  Max vertical velocity [0, 5] m/s
+ *  Max vertical velocity of the aircraft during a ground station task. 
+ *  This value can be set from 0 - 5 m/s. //TODO: Is this meters/seconds?
  */
 @property(nonatomic, assign) float maxVerticalVelocity;
 
 /**
- *  Max horizontal velocity [0, 7] m/s
+ *  Max horizontal velocity of the aircraft during a ground station task.
+ *  This value can be set from 0 - 7 m/s.
  */
 @property(nonatomic, assign) float maxHorizontalVelocity;
 
 /**
- *  Max angular velocity in the mission. [30, 180] degree/s. default is 100 degree/s
+ *  Max angular velocity of the aircraft during a ground station task.
+ *  This value can be set from 30 - 180 degrees/second. The default value
+ *  for this property is 100 degrees/second.
  */
 @property(nonatomic, assign) float maxAngularVelocity;
 
 /**
- *  Max execute time for the task. if execute time over, then the aircraft will exit the waypoint mission and enter go home mode. [60, 1500] second.
+ *  Max execution time of a ground station task. This value can be set from
+ *  60 - 1500 seconds. Once the value is set, if the execution time of the ground 
+ *  station task goes over the max execution time set, the aircraft will exit the 
+ *  ground station task and enter go home mode.
  */
 @property(nonatomic, assign) uint16_t maxExecuteTime;
 
 /**
- *  Action for the aircraft while the task finished
+ *  Will be set to the action the aircraft will take when the
+ *  ground station task is finished. 
  */
 @property(nonatomic, assign) DJIGSTaskFinishedAction finishedAction;
 
 /**
- *  How the aircraft heading while executing task
+ *  Will be set to the heading mode the aircraft will adhere to during a
+ *  ground station task.
  */
 @property(nonatomic, assign) DJIGSHeadingMode headingMode;
 
 /**
- *  Create new task
- *
+ *  Creates a new ground station task
  */
 +(id) newTask;
 
 /**
- *  Add waypoint, The maximum waypoint count is 100 for Inspire/Matrice100/Phantom3Pro/Phantom3Adv. 16 for Phantom2Vision/Phantom2Vision+
+ *  Adds a waypoint to the ground station task. The maximum number of waypoints
+ *  allowed for the Inspire 1, Matrice 100, Phantom 3 Professional, and Phantom 3 Advanced
+ *  is 100. The maximum number of waypoints allowed for the Phantom 2 Vision
+ *  and the Phantom 2 Vision+ is 16.
  *
- *  @param waypoint
+ *  @param Waypoint to be added to the ground station task
  */
 -(void) addWaypoint:(DJIGroundStationWaypoint*)waypoint;
 
 /**
- *  Remove one waypoint
+ *  Removes one waypoint from the ground station task
  *
- *  @param waypoint Waypoint will be removed
+ *  @param waypoint Waypoint to be removed from the ground station task
  */
--(void) removeWaypoint:(DJIGroundStationWaypoint*)waypoint;
+-(void) removeWaypoint:(DJIGroundStationWaypoint*)waypoint; //TODO: Which one does it remove?
 
 /**
- *  Remove all waypoints
+ *  Removes all waypoints from the ground station task
  */
 -(void) removeAllWaypoint;
 
 /**
- *  Get waypoint at index
+ *  Gets a waypoint from the array of waypoints in a ground station task based on a specific index
  *
- *  @param index Index of array
+ *  @param index Index of the waypoint wanting to be retrieved from the array of waypoints in the
+ *  ground station task
  *
- *  @return Waypoint object
+ *  @return Waypoint of type DJIGroundStationWaypoint
  */
 -(DJIGroundStationWaypoint*) waypointAtIndex:(int)index;
 
 /**
- *  Get all waypoints
+ *  Gets all the waypoints from the ground station task 
  *
- *  @return Waypoint array
+ *  @return Array of waypoints, where each waypoint is of type DJIGroundStationWaypoint
  */
 -(NSArray*) allWaypoints;
 

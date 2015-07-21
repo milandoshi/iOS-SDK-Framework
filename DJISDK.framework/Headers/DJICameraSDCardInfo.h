@@ -7,75 +7,82 @@
  *
  */
 
-
 //TODO FILE NAME CHANGE: DJISDCardCurrentState.h
 //Alternatively, it could be DJICameraSDCardInformation.h.
 
 #import <Foundation/Foundation.h>
 
-/**
- *  Provide SD card general informations and status
- */
 @interface DJICameraSDCardInfo : NSObject
 
-/**
- *  The SD card has error.
+/** 
+ *  Whether or not the SD card has an error 
  */
 @property(nonatomic, readonly) BOOL hasError;
 
-/**
- *  The SD card is read only.
+/** 
+ *  Whether or not the SD card is read-only 
  */
 @property(nonatomic, readonly) BOOL readOnly;
 
-/**
- *  The SD card's format is invalid.
+/** 
+ *  Whether or not the SD card has an invalid format 
  */
 @property(nonatomic, readonly) BOOL invalidFormat;
 
-/**
- *  The SD card is formated.
+/** 
+ *  Whether or not the SD card is formatted 
  */
 @property(nonatomic, readonly) BOOL isFormated;
+//TODO PROPERTY NAME CHANGE: isFormatted
 
-/**
- *  The SD card is formating
+/** 
+ *  Whether or not the SD card is currently formatting 
  */
 @property(nonatomic, readonly) BOOL isFormating;
+//TODO PROPERTY NAME CHANGE: isFormatting
 
-/**
- *  The SD card is full.
+/** 
+ *  Whether or not the SD card is full 
  */
 @property(nonatomic, readonly) BOOL isFull;
 
-/**
- *  Whether the SD card is a valid card.
+/** 
+ *  Whether or not the SD card is valid 
  */
+//TODO: Clarify meaning
 @property(nonatomic, readonly) BOOL isValid;
 
-/**
- *  Whether the SD card is inserted into the camera.
+/** 
+ *  Whether or not the SD card is currently inserted into the camera 
  */
 @property(nonatomic, readonly) BOOL isInserted;
 
-/**
- *  Total size of the SD card.
+/** 
+ *  Returns the size of the SD card 
  */
 @property(nonatomic, readonly) int totalSize;
+//TODO PROPERTY NAME CHANGE: totalSpace
+//TODO: Clarify meaning (what are the units?)
 
-/**
- *  Remain size of the SD card.
+/** 
+ *  Returns the remaining space left in the SD card 
  */
 @property(nonatomic, readonly) int remainSize;
+//TODO PROPERTY NAME CHANGE: remainingSpace
+//TODO: Clarify meaning (what are the units?)
 
-/**
- *  The available count for taking photo.
+/** 
+ *  Returns the number of pictures that can be taken with the space 
+ *  availabe on the SD card. 
  */
+//TODO: Clarify meaning and what is the unit
 @property(nonatomic, readonly) int availableCaptureCount;
 
-/**
- *  Time available for recording. Supported in Inspire 1/Phantom3 professional
+/** 
+ *  Returns the time available for recording with the space availabe 
+ *  in the SD card. Property supported for Inspire 1 & Phantom 3 Professional.
  */
+//TODO: Clarify meaning and what is the unit
 @property(nonatomic, readonly) int availableRecordingTime;
 
 @end

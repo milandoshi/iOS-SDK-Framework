@@ -12,7 +12,7 @@
 
 @class UIImage;
 /**
- *  Media type
+ *  Numerous media types
  */
 typedef NS_ENUM(NSUInteger, MediaType){
     /**
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, MediaType){
     /**
      *  JPG
      */
-    MediaTypeJPG,
+    MediaTypeJPG, //TODO: Is this .jpg or .jpeg?
     /**
      *  MP4
      */
@@ -64,24 +64,28 @@ typedef void (^AsyncFetchHandler)(NSData* data, BOOL* stop, NSError* error);
 @property(nonatomic, readonly) long long fileSize;
 
 /**
- *  The time 
+ *  Time when the media file was created //TODO: What's the format?
  */
 @property(nonatomic, readonly) NSString* createTime;
+//TODO PROPERTY NAME CHANGE: timeCreated
 
 /**
- *  If media is video. this property is show the duration of the video
+ *  If the media file is a video, this property stores the duration of the video in seconds.
  */
 @property(nonatomic, readonly) float durationSeconds;
+//TODO PROPERTY NAME CHANGE: durationInSeconds
 
 /**
- *  The media type
+ *  Type of the media file
  */
 @property(nonatomic, readonly) MediaType mediaType;
 
 /**
- *  The media url
+ *  //TODO: What is the URL?
  */
 @property(nonatomic, readonly) NSString* mediaURL;
+
+~~~~~~
 
 /**
  *  Thumbnail of this media. if nil user should call once - fetchThumbnail: to fetch the thumbnail data

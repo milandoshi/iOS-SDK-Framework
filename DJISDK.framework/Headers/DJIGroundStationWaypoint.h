@@ -129,27 +129,32 @@ typedef NS_ENUM(NSUInteger, DJIWaypointActionType){
 @property(nonatomic) int actionTimeout;
 
 /**
- *  Repeat times for action. All actions completed is one times. Defaule is one times.
+ *  Dictates how many times a waypoint action is repeated. The default value is one time.
  */
 @property(nonatomic, assign) NSUInteger actionRepeatTimes;
 
 -(id) initWithCoordinate:(CLLocationCoordinate2D)coordinate;
 
 /**
- *  Add action for waypoint. action count should not larger than DJIMaxActionCount
+ *  Adds a waypoint action to a waypoint. In order for this method to work, the 
+ *  number of current waypoint actions added to the waypoint should not be larger
+ *  than DJIMaxActionCount.
  *
- *  @param action Action for waypoint
+ *  @param action Waypoint action to be added to the waypoint
  *
- *  @return Result of adding waypoint action. if waypoint action count is over DJIMaxActionCount or waypoint has existed in the action list or waypoint action's actionParam invalid, then return NO
+ *  @return Whether or not the waypoint action has been added to the waypoint. If the
+ *  number of current waypoint actions added to the waypoint is not larger
+ *  than DJIMaxActionCount, the waypoint //TODO: DOES NOT exist in the action list,
+ *  or the waypoint action's actionParam is invalid, this method returns NO.
  */
 -(BOOL) addWaypointAction:(DJIWaypointAction*)action;
 
 /**
- *  Remove an action from waypoint
+ *  Removes a waypoint action from a waypoint
  *
- *  @param action Action to be removed
+ *  @param action Waypoint action to be removed from the waypoint
  *
- *  @return Result of remove waypoint action
+ *  @return Whether or not the waypoint action has been removed from the waypoint
  */
 -(BOOL) removeWaypointAction:(DJIWaypointAction*)action;
 @end

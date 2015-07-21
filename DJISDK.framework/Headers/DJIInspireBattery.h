@@ -10,7 +10,8 @@
 #import <DJISDK/DJIBattery.h>
 
 /**
- *  Description DJIInspireBattery is one type of dji battery. the designed volume is 4500mAh, 22.2V
+ *  The DJI Inspire Battery is one of the many different types of batteries offered
+ *  by DJI. The designed volume of this battery is 4500mAh and 22.2V. 
  */
 @interface DJIInspireBattery : DJIBattery
 
@@ -22,11 +23,11 @@
 -(void) getBatteryHistoryState:(void(^)(NSArray* history, DJIError* error))result;
 
 /**
- *  Get battery's current state.
+ *  Gets the current battery state, which is one the seven battery states available in DJIBattery.h.
  *
- *  @param result Remote execute result.
+ *  @param result //TODO: Make sure to fix the block
  */
--(void) getBatteryCurrentState:(void (^)(DJIBatteryState* state, DJIError *))result;
+-(void) getBatteryCurrentState:(void (^)(DJIBatteryState* state, DJIError* error))result;
 
 /**
  *  Set battery's self-discharge day.

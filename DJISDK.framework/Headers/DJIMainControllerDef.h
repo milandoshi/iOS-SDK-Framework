@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 /**
- *  Main controller error
+ *  All possible main controller errors
  */
 typedef NS_ENUM(NSInteger, MCError){
     /**
@@ -20,19 +20,19 @@ typedef NS_ENUM(NSInteger, MCError){
      */
     MC_NO_ERROR,
     /**
-     *  Main controller config error
+     *  Configuration error:
      */
     MC_CONFIG_ERROR,
     /**
-     *  Main controller serial number error
+     *  Serial number error:
      */
     MC_SERIALNUM_ERROR,
     /**
-     *  Main controller IMU error
+     *  IMU error:  //TODO: What is IMU?
      */
     MC_IMU_ERROR,
     /**
-     *  Main controller X1 error
+     *  //TODO: What is an X1 error?
      */
     MC_X1_ERROR,
     /**
